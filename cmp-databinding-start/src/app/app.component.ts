@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,14 @@ export class AppComponent {
       name: blueprintData.blueprintName,
       content: blueprintData.blueprintContent
     });
+  }
+
+  onChangeFirst() {
+    this.serverElements[0].name = 'Changed!';
+  }
+
+  onDestroyFirst() {
+    this.serverElements.splice(0, 1);
   }
 
 }
