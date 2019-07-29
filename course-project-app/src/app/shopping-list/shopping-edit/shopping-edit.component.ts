@@ -9,10 +9,10 @@ import { Ingredient } from '../../shared/ingredient.model';
 })
 export class ShoppingEditComponent implements OnInit {
 
-    @ViewChild('nameInput')
+    @ViewChild('nameInput', {static: false})
     nameInputRef: ElementRef;
 
-    @ViewChild('amountInput')
+    @ViewChild('amountInput', {static: false})
     amountInputRef: ElementRef;
 
     @Output()
